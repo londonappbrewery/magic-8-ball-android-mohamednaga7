@@ -30,13 +30,10 @@ public class MainActivity extends AppCompatActivity {
 
         myButton = findViewById(R.id.askButton);
 
-        myButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Random random = new Random();
-                int number = random.nextInt(ballArray.length);
-                ballDisplay.setImageResource(ballArray[number]);
-            }
+        myButton.setOnClickListener(v -> {
+            Random random = new Random();
+            int number = random.nextInt(ballArray.length);
+            ballDisplay.setImageResource(ballArray[number]);
         });
     }
 }
